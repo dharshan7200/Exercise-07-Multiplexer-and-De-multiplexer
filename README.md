@@ -1,7 +1,17 @@
-# Exercise-07-Multiplexer-and-De-multiplexer
-### AIM: To implement 4 X1 multiplexer and 1X4 de multiplexer using verilog and validate its outputs
-### HARDWARE REQUIRED:  – PC, Cyclone II , USB flasher
-### SOFTWARE REQUIRED:   Quartus prime
+### Exercise-07-Multiplexer-and-De-multiplexer
+
+### AIM:
+
+To implement 4 X1 multiplexer and 1X4 de multiplexer using verilog and validate its outputs
+
+### HARDWARE REQUIRED:
+
+– PC, Cyclone II , USB flasher
+
+### SOFTWARE REQUIRED: 
+
+Quartus prime
+
 ### THEORY 
 
 ## What are Multiplexer and Demultiplexer?
@@ -48,24 +58,65 @@ If the control input changes to AB = 10, then all the gates are restricted excep
  
 ### Procedure
 /* write all the steps invloved */
+1.Start the module using module projname()
+
+2.Declare the inputs and outputs along with the select lines according to the multiplexer and demultiplexer.
+
+3.Use wire to assign intermediate outputs.
+
+4.Use and,or and not gates to get the desired output.
+
+5.End the module.
+
+6.Generate RTL realization and timing diagrams.
 
 
 
 ### PROGRAM 
-/*
+```
 Program for flipflops  and verify its truth table in quartus using Verilog programming.
-Developed by: 
-RegisterNumber:  
-*/
-
-
+Developed by: Dharshan D
+RegisterNumber: 23001663 
+```
+## multiplexer
+```
+module MUX(I0,I1,I2,I3,S0,S1,Y);
+input I0,I1,I2,I3,S0,S1;
+output Y;
+wire S0C,S1C;
+not(S0C,S0);
+not(S1C,S1);
+wire P,Q,R,S;
+and(P,S0C,S1C,I0);
+and(Q,S0C,S1,I1);
+and(R,S0,S1C,I2);
+and(S,S0,S1,I3);
+or(Y,P,Q,R,S);
+endmodule
+```
+## demultiplexer
+```
+module DEMUX(Y0,Y1,Y2,Y3,S0,S1,I);
+input S0,S1,I;
+output Y0,Y1,Y2,Y3;
+wire S0C,S1C;
+not(S0C,S0);
+not(S1C,S1);
+and(Y0,I,S0C,S1C);
+and(Y1,I,S0C,S1);
+and(Y2,I,S0,S1C);
+and(Y3,I,S0,S1);
+endmodule
+```
 
 
 
 
 ### RTL LOGIC  
-
-
+## multiplexer
+![image](https://github.com/dharshan7200/Exercise-07-Multiplexer-and-De-multiplexer/assets/138850116/a100885a-1d1c-49bd-bdab-ae371546f505)
+## demultiplexer
+![image](https://github.com/dharshan7200/Exercise-07-Multiplexer-and-De-multiplexer/assets/138850116/1657c60b-da09-46cf-8b56-6d952d09d425)
 
 
 
@@ -74,15 +125,29 @@ RegisterNumber:
 
 ### TIMING DIGRAMS  
 
+## multiplexer
 
+![image](https://github.com/dharshan7200/Exercise-07-Multiplexer-and-De-multiplexer/assets/138850116/3b741ae6-710f-4cb3-b7fe-3cba6ead91b3)
+
+## demultiplexer
+
+![image](https://github.com/dharshan7200/Exercise-07-Multiplexer-and-De-multiplexer/assets/138850116/083b03a2-b633-432c-930b-293bf3984284)
 
 
 
 ### TRUTH TABLE 
 
+## multiplexer
+![image](https://github.com/dharshan7200/Exercise-07-Multiplexer-and-De-multiplexer/assets/138850116/ff86cabc-b027-45e5-97dd-364dae776377)
 
+
+## demultiplexer
+![image](https://github.com/dharshan7200/Exercise-07-Multiplexer-and-De-multiplexer/assets/138850116/fa25419d-ec0d-48e9-9c2b-226c90b31475)
 
 
 
 
 ### RESULTS 
+Hence the 4 X1 multiplexer and 1X4 de multiplexer has been implemented using verilog and outputs are validated.
+
+
