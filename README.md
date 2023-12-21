@@ -130,7 +130,7 @@ endmodule
 
 ## demultiplexer
 
-![image](https://github.com/dharshan7200/Exercise-07-Multiplexer-and-De-multiplexer/assets/138850116/083b03a2-b633-432c-930b-293bf3984284)
+![image](https://github.com/dharshan7200/Exercise-07-Multiplexer-and-De-multiplexer/assets/138850116/6f0487d4-97c9-4520-b855-b2740b2f3029)
 
 
 
