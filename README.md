@@ -57,7 +57,6 @@ If the control input changes to AB = 10, then all the gates are restricted excep
  
  
 ### Procedure
-/* write all the steps invloved */
 1.Start the module using module projname()
 
 2.Declare the inputs and outputs along with the select lines according to the multiplexer and demultiplexer.
@@ -123,7 +122,7 @@ endmodule
 
 
 
-### TIMING DIGRAMS  
+### TIMING DIAGRAMS  
 
 ## multiplexer
 
